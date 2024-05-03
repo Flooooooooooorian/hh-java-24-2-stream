@@ -42,7 +42,6 @@ public class Main {
                 .mapToInt(Integer::intValue)
                 .sorted()
                 .sum());
-                //.reduce(0, (a, b) -> a + b));
 
     }
 }
