@@ -1,6 +1,9 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Main {
 
@@ -29,6 +32,17 @@ public class Main {
 //                });
 
         System.out.println(listAfterStream);
+
+        System.out.println("-----------");
+
+        List<Integer> numbers = Arrays.asList(2, 1, 7, 0, 4, 5, 9, 7, 3, 8, 6);
+        System.out.println(numbers.stream()
+                .filter(integer -> integer % 2 == 0)
+                .map(integer -> integer * 2)
+                .mapToInt(Integer::intValue)
+                .sorted());
+                //.sum()
+                //.reduce(0, (a, b) -> a + b));
 
     }
 }
