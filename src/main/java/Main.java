@@ -40,9 +40,8 @@ public class Main {
                 .filter(integer -> integer % 2 == 0)
                 .map(integer -> integer * 2)
                 .mapToInt(Integer::intValue)
-                .sorted());
-                //.sum()
-                //.reduce(0, (a, b) -> a + b));
+                .sorted()
+                .reduce(0, (a, b) -> a + b));
 
     }
 }
