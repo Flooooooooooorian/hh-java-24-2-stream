@@ -41,7 +41,6 @@ public class Main {
                 .map(integer -> integer * 2)
                 .mapToInt(Integer::intValue)
                 .sorted()
-                .reduce(0, (a, b) -> a + b));
-
+                .sum());
     }
 }
